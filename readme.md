@@ -1,6 +1,6 @@
 # Library Management System
 
-This project is a web-based library management system developed using Flask for the backend and HTML/CSS/JavaScript for the frontend. It allows administrators to manage users, books, and book borrowings efficiently. Has the history of all the users, books, borrows. has a normal user system as well where you can log in and borrow an existing book. all bugs have been cleared and as far as I know its impossible to break the website without manipulating the data with outside sources such as dbeaver.
+This project is a web-based library management system developed using Flask for the backend and HTML/CSS/JavaScript for the frontend. It allows administrators to manage users, books, and book borrowings efficiently. Has the history of all the users, books, borrows. has a normal user system as well where you can log in and borrow an existing book. all bugs have been cleared and as far as I know its impossible to break the website without manipulating the data with outside sources such as dbeaver. ADMIN PASSWORD IS 1 AND THE NAME IS "admin"
 
 ## Features
 
