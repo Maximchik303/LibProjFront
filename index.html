@@ -80,7 +80,7 @@
             const password = document.getElementById('regPassword').value;
 
             try {
-                const response = await axios.post('http://127.0.0.1:5000/register', {
+                const response = await axios.post('https://libprojback.onrender.com/register', {
                     name,
                     email,
                     city,
@@ -96,7 +96,7 @@
             const name = document.getElementById('name').value;
             const password = document.getElementById('password').value;
 
-            axios.post('http://127.0.0.1:5000/login', {
+            axios.post('https://libprojback.onrender.com/login', {
                 name: name,
                 password: password
             })

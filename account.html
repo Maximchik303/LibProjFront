@@ -79,7 +79,7 @@
     <script>
         async function fetchAvailableBooks() {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/not_disabled_books_admin');
+                const response = await axios.get('https://libprojback.onrender.com/not_disabled_books_admin');
                 const availableBooks = response.data;
                 const booksList = document.getElementById('booksList');
 
@@ -106,7 +106,7 @@
                     return;
                 }
 
-                const response = await axios.post(`http://127.0.0.1:5000/borrow_book/${bookId}`, {}, {
+                const response = await axios.post(`https://libprojback.onrender.com/borrow_book/${bookId}`, {}, {
                     headers: {
                         'x-access-token': token
                     }
@@ -127,7 +127,7 @@
                     return;
                 }
 
-                const response = await axios.post(`http://127.0.0.1:5000/return_book/${borrowId}`, {}, {
+                const response = await axios.post(`https://libprojback.onrender.com/return_book/${borrowId}`, {}, {
                     headers: {
                         'x-access-token': token
                     }
@@ -148,7 +148,7 @@
                     return;
                 }
 
-                const response = await axios.get('http://127.0.0.1:5000/active_borrows', {
+                const response = await axios.get('https://libprojback.onrender.com/active_borrows', {
                     headers: {
                         'x-access-token': token
                     }

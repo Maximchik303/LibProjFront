@@ -86,7 +86,7 @@
             }
 
             try {
-                const response = await axios.get('http://127.0.0.1:5000/all_users', {
+                const response = await axios.get('https://libprojback.onrender.com/all_users', {
                     headers: {
                         'x-access-token': token
                     }
@@ -110,7 +110,7 @@
             const type = parseInt(document.getElementById('bookType').value);
 
             try {
-                const response = await axios.post('http://127.0.0.1:5000/add_book_admin', {
+                const response = await axios.post('https://libprojback.onrender.com/add_book_admin', {
                     name,
                     author,
                     type
@@ -137,7 +137,7 @@
             }
 
             try {
-                const response = await axios.post(`http://127.0.0.1:5000/disable_user/${userId}`, {}, {
+                const response = await axios.post(`https://libprojback.onrender.com/disable_user/${userId}`, {}, {
                     headers: {
                         'x-access-token': token
                     }
@@ -152,7 +152,7 @@
 
         async function fetchActiveBooks() {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/not_disabled_books_admin');
+                const response = await axios.get('https://libprojback.onrender.com/not_disabled_books_admin');
                 const activeBooks = response.data;
                 const activeBooksTable = document.getElementById('activeBooks');
 
@@ -195,7 +195,7 @@
             if (password) data.password = password; // Only send password if provided
 
             try {
-                const response = await axios.put(`http://127.0.0.1:5000/edit_user/${userId}`, data, {
+                const response = await axios.put(`https://libprojback.onrender.com/edit_user/${userId}`, data, {
                     headers: {
                         'x-access-token': token
                     }
@@ -227,7 +227,7 @@
                     return;
                 }
 
-                const response = await axios.put(`http://127.0.0.1:5000/edit_book_admin/${bookId}`, data, {
+                const response = await axios.put(`https://libprojback.onrender.com/edit_book_admin/${bookId}`, data, {
                     headers: {
                         'x-access-token': token
                     }
@@ -242,7 +242,7 @@
 
         async function fetchNotReturnedBorrows() {
             try {
-                const response = await axios.get('http://127.0.0.1:5000/not_returned_borrows');
+                const response = await axios.get('https://libprojback.onrender.com/not_returned_borrows');
                 const notReturnedBorrows = response.data;
                 const notReturnedBorrowsTable = document.getElementById('notReturnedBorrows');
 
@@ -274,7 +274,7 @@
             return;
         }
 
-        const response = await axios.get('http://127.0.0.1:5000/late_returns_admin', {
+        const response = await axios.get('https://libprojback.onrender.com/late_returns_admin', {
             headers: {
                 'x-access-token': token
             }
